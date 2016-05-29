@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editWindow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/showEditDetails"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/parentmenushader">
+
+        <TextView
+            android:id="@+id/chapterVauleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="4dp"
+            android:text="字数:"
+            android:textColor="#666"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/chapterVaule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/chapterVauleTitle"
+            android:paddingBottom="4dp"
+            android:text="6000字"
+            android:textColor="#2d64b3"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/speedtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/speedVaule"
+            android:paddingBottom="4dp"
+            android:text="时速:"
+            android:textColor="#666"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/speedVaule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/saveStatus"
+            android:paddingBottom="4dp"
+            android:text="0字/秒"
+            android:textColor="@color/baidublue"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/savedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="4dp"
+            android:text="已保存"
+            android:textColor="#2d64b3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/saveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/savedTitle"
+            android:paddingBottom="4dp"
+            android:text="状态:"
+            android:textColor="#666"
+            android:textSize="14dp" />
+    </RelativeLayout>
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="#000"-->
+    <!--android:text="测试"-->
+    <!--android:id="@+id/danmu"-->
+    <!--android:textSize="16dp"-->
+    <!--android:maxLines="3"-->
+    <!--/>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/articleEditButtonDiv"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/parentmainpart"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.administrator.daiylywriting.MyOwnViews.LineEditText
+                android:id="@+id/articleEditView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="top"
+                android:lineSpacingExtra="5dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"></com.example.administrator.daiylywriting.MyOwnViews.LineEditText>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <SlidingDrawer
+        android:id="@+id/slidingModel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/articleEditButtonDiv"
+        android:content="@+id/modelDiv"
+        android:handle="@+id/imageViewIcon"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/modelDiv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--/>-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <EditText
+                    android:id="@+id/modelEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/baidublue"
+                    android:gravity="top"
+                    android:lineSpacingExtra="5dp"
+                    android:paddingLeft="9dp"
+                    android:textColor="@color/white" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></TextView>
+        </RelativeLayout>
+
+
+    </SlidingDrawer>
+
+    <SlidingDrawer
+        android:id="@+id/slidingWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:content="@+id/webDiv"
+        android:handle="@+id/imageViewIconWeb"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/webDiv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/editWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></WebView>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/imageViewIconWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroundclick"
+            android:visibility="gone"></TextView>
+    </SlidingDrawer>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/pathRight"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:src="@drawable/right"></ImageView>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/pathLeft"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:src="@drawable/left"></ImageView>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/pathNote"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:src="@drawable/note"></ImageView>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/pathWeb"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:src="@drawable/web"></ImageView>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/menuAdd"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:src="@drawable/tool"></ImageView>-->
+    <RelativeLayout
+        android:id="@+id/articleEditButtonDiv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/parentmenushader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/danmudiv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/rokectImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/rokect" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rokectImg"
+                    android:layout_centerHorizontal="true"
+                    android:text="弹幕"
+                    android:textColor="@color/fontblack"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/notediv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/noteimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/note" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noteimg"
+                    android:layout_centerHorizontal="true"
+                    android:text="大纲"
+                    android:textColor="@color/fontblack"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/webdiv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/webimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/web" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/webimg"
+                    android:layout_centerHorizontal="true"
+                    android:text="资料"
+                    android:textColor="@color/fontblack"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/undodiv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/undoimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/undoyes" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/undoimg"
+                    android:layout_centerHorizontal="true"
+                    android:text="撤销"
+                    android:textColor="@color/fontblack"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/redodiv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/redoimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/reduyes" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/redoimg"
+                    android:layout_centerHorizontal="true"
+                    android:text="恢复"
+                    android:textColor="@color/fontblack"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

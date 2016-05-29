@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fcf="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/div_profilehead"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="50%h"
+        app:layout_widthPercent="100%w">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/yinhe"
+            app:layout_heightPercent="89%h"
+            app:layout_widthPercent="100%w" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            app:layout_marginTopPercent="89%h"
+            app:layout_widthPercent="100%w" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="2dp"
+            app:layout_heightPercent="28%h"
+            app:layout_marginRightPercent="8%h"
+            app:layout_marginTopPercent="72%h"
+            app:layout_widthPercent="28%h">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/pikaqiu" />
+        </android.support.v7.widget.CardView>
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+    <com.zhy.android.percent.support.PercentRelativeLayout
+        android:id="@+id/div_books"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/div_profilehead"
+        app:layout_heightPercent="40%h"
+        app:layout_widthPercent="100%w">
+
+        <at.technikum.mti.fancycoverflow.FancyCoverFlow
+            android:id="@+id/gallery_flow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fcf:maxRotation="45"
+            fcf:unselectedAlpha="0.3"
+            fcf:unselectedSaturation="0.0"
+            fcf:unselectedScale="0.4" />
+
+    </com.zhy.android.percent.support.PercentRelativeLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

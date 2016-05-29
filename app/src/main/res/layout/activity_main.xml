@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fcf="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="90%h"
+        app:layout_widthPercent="100%w"
+        />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:id="@+id/div_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        app:layout_heightPercent="10%h"
+        app:layout_widthPercent="100%w">
+
+        <be.webelite.ion.IconView
+            android:id="@+id/btn_books"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            app:layout_heightPercent="100%h"
+            app:layout_textSizePercent="6%w"
+            app:layout_widthPercent="20%w"
+            app:name="ion_clipboard" />
+
+        <be.webelite.ion.IconView
+            android:id="@+id/btn_socials"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            app:layout_heightPercent="100%h"
+            app:layout_textSizePercent="6%w"
+            app:layout_widthPercent="20%w"
+            app:name="ion_social_rss" />
+
+        <be.webelite.ion.IconView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            app:layout_heightPercent="100%h"
+            app:layout_textSizePercent="6%w"
+            app:layout_widthPercent="20%w" />
+
+        <be.webelite.ion.IconView
+            android:id="@+id/btn_profile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            app:layout_heightPercent="100%h"
+            app:layout_textSizePercent="6%w"
+            app:layout_widthPercent="20%w"
+            app:name="ion_person" />
+
+        <be.webelite.ion.IconView
+            android:id="@+id/btn_setting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            app:layout_heightPercent="100%h"
+            app:layout_textSizePercent="6%w"
+            app:layout_widthPercent="20%w"
+            app:name="ion_gear_b" />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
+        app:layout_heightPercent="12%h"
+        app:layout_widthPercent="12%h">
+        <be.webelite.ion.IconView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            app:layout_textSizePercent="6%w"
+            app:name="ion_android_add" />
+    </android.support.v7.widget.CardView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/div_menu"
+        />
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

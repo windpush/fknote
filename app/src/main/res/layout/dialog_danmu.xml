@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="#f0f0f0"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="弹幕弹幕duang~duang~"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/colorShow"
+            android:background="@drawable/whiteback"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:hint="和正在码字的伙伴们聊聊吧~"
+            android:textSize="15dp"
+            android:id="@+id/dmVaule"
+            />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/colorShow"
+            android:layout_alignParentRight="true"
+            android:background="#000"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/dmVaule"
+            android:layout_marginTop="5dp"
+            >
+            <View
+                android:id="@+id/blueView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#0099CC"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+            <View
+                android:id="@+id/greenView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#009933"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+            <View
+                android:id="@+id/grayView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#666666"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+            <View
+                android:id="@+id/redView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#CC0033"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+
+            <View
+                android:id="@+id/ziSeView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#6666CC"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+
+            <View
+                android:id="@+id/originView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#CC6633"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+
+            <View
+                android:id="@+id/blackView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                ></View>
+            </LinearLayout>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="90dp">
+
+            <TextView
+                android:id="@+id/center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:id="@+id/no"
+                android:layout_marginRight="60dp"
+                android:layout_toLeftOf="@+id/center"
+                android:text="取消"
+                android:textColor="@color/red"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="-30dp"
+                android:layout_toRightOf="@+id/center"
+                android:id="@+id/yes"
+                android:padding="10dp"
+                android:text="发送"
+                android:textColor="@color/baidublue"
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/center"
+                android:id="@+id/closedm"
+                android:padding="10dp"
+                android:text="关闭弹幕"
+                android:textColor="#000"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
